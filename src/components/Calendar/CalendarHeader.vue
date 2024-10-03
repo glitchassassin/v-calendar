@@ -4,9 +4,9 @@
     :class="{ 'is-lg': isLg, 'is-xl': isXl, 'is-2xl': is2xl }"
     :style="gridStyle"
   >
-    <button
+    <div
       v-if="show.prev"
-      type="button"
+      role="button"
       class="vc-arrow vc-prev vc-focus"
       :disabled="!canMovePrev"
       @click="movePrev"
@@ -15,19 +15,19 @@
       <CalendarSlot name="header-prev-button" :disabled="!canMovePrev">
         <BaseIcon name="ChevronLeft" size="24" />
       </CalendarSlot>
-    </button>
+    </div>
     <div v-if="show.title" class="vc-title-wrapper">
       <CalendarSlot name="header-title-wrapper">
-        <button type="button" class="vc-title" v-popover="navPopoverOptions">
+        <div role="button" class="vc-title" v-popover="navPopoverOptions">
           <CalendarSlot name="header-title" :title="page.title">
             <span>{{ page.title }}</span>
           </CalendarSlot>
-        </button>
+        </div>
       </CalendarSlot>
     </div>
-    <button
+    <div
       v-if="show.next"
-      type="button"
+      role="button"
       class="vc-arrow vc-next vc-focus"
       :disabled="!canMoveNext"
       @click="moveNext"
@@ -36,7 +36,7 @@
       <CalendarSlot name="header-next-button" :disabled="!canMoveNext">
         <BaseIcon name="ChevronRight" size="24" />
       </CalendarSlot>
-    </button>
+    </div>
   </div>
 </template>
 
