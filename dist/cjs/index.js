@@ -6238,7 +6238,7 @@ const _hoisted_2$5 = {
   class: "vc-title-wrapper"
 };
 const _hoisted_3$4 = {
-  type: "button",
+  role: "button",
   class: "vc-title"
 };
 const _hoisted_4$3 = ["disabled"];
@@ -6324,9 +6324,9 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
         class: vue.normalizeClass(["vc-header", { "is-lg": __props.isLg, "is-xl": __props.isXl, "is-2xl": __props.is2xl }]),
         style: vue.normalizeStyle(vue.unref(gridStyle))
       }, [
-        vue.unref(show).prev ? (vue.openBlock(), vue.createElementBlock("button", {
+        vue.unref(show).prev ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 0,
-          type: "button",
+          role: "button",
           class: "vc-arrow vc-prev vc-focus",
           disabled: !vue.unref(canMovePrev),
           onClick: _cache[0] || (_cache[0] = //@ts-ignore
@@ -6353,7 +6353,7 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
         vue.unref(show).title ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$5, [
           vue.createVNode(_sfc_main$i, { name: "header-title-wrapper" }, {
             default: vue.withCtx(() => [
-              vue.withDirectives((vue.openBlock(), vue.createElementBlock("button", _hoisted_3$4, [
+              vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_3$4, [
                 vue.createVNode(_sfc_main$i, {
                   name: "header-title",
                   title: __props.page.title
@@ -6370,9 +6370,9 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
             _: 1
           })
         ])) : vue.createCommentVNode("", true),
-        vue.unref(show).next ? (vue.openBlock(), vue.createElementBlock("button", {
+        vue.unref(show).next ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 2,
-          type: "button",
+          role: "button",
           class: "vc-arrow vc-next vc-focus",
           disabled: !vue.unref(canMoveNext),
           onClick: _cache[2] || (_cache[2] = //@ts-ignore

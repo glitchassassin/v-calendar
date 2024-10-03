@@ -6236,7 +6236,7 @@ const _hoisted_2$5 = {
   class: "vc-title-wrapper"
 };
 const _hoisted_3$4 = {
-  type: "button",
+  role: "button",
   class: "vc-title"
 };
 const _hoisted_4$3 = ["disabled"];
@@ -6322,9 +6322,9 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
         class: normalizeClass(["vc-header", { "is-lg": __props.isLg, "is-xl": __props.isXl, "is-2xl": __props.is2xl }]),
         style: normalizeStyle(unref(gridStyle))
       }, [
-        unref(show).prev ? (openBlock(), createElementBlock("button", {
+        unref(show).prev ? (openBlock(), createElementBlock("div", {
           key: 0,
-          type: "button",
+          role: "button",
           class: "vc-arrow vc-prev vc-focus",
           disabled: !unref(canMovePrev),
           onClick: _cache[0] || (_cache[0] = //@ts-ignore
@@ -6351,7 +6351,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
         unref(show).title ? (openBlock(), createElementBlock("div", _hoisted_2$5, [
           createVNode(_sfc_main$i, { name: "header-title-wrapper" }, {
             default: withCtx(() => [
-              withDirectives((openBlock(), createElementBlock("button", _hoisted_3$4, [
+              withDirectives((openBlock(), createElementBlock("div", _hoisted_3$4, [
                 createVNode(_sfc_main$i, {
                   name: "header-title",
                   title: __props.page.title
@@ -6368,9 +6368,9 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
             _: 1
           })
         ])) : createCommentVNode("", true),
-        unref(show).next ? (openBlock(), createElementBlock("button", {
+        unref(show).next ? (openBlock(), createElementBlock("div", {
           key: 2,
-          type: "button",
+          role: "button",
           class: "vc-arrow vc-next vc-focus",
           disabled: !unref(canMoveNext),
           onClick: _cache[2] || (_cache[2] = //@ts-ignore
