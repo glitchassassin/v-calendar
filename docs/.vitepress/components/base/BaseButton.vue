@@ -2,9 +2,9 @@
   <a v-if="url" :href="url" :class="elClass">
     <slot />
   </a>
-  <button v-else :class="elClass">
+  <span role="button" v-else :class="elClass">
     <slot />
-  </button>
+  </span>
 </template>
 
 <script setup>

@@ -2,12 +2,13 @@
   <VCalendar ref="calendar">
     <template #footer>
       <div class="w-full px-4 pb-3">
-        <button
+        <span
+          role="button"
           class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold w-full px-3 py-1 rounded-md"
           @click="moveToday"
         >
           Today
-        </button>
+        </span>
       </div>
     </template>
   </VCalendar>

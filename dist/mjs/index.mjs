@@ -6604,8 +6604,8 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
         ref: navContainer
       }, [
         createElementVNode("div", _hoisted_1$5, [
-          createElementVNode("button", {
-            type: "button",
+          createElementVNode("span", {
+            role: "button",
             class: "vc-nav-arrow is-left vc-focus",
             disabled: !unref(prevItemsEnabled),
             onClick: movePrev,
@@ -6626,14 +6626,14 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
               _: 1
             }, 8, ["disabled"])
           ], 40, _hoisted_2$4),
-          createElementVNode("button", {
-            type: "button",
+          createElementVNode("span", {
+            role: "button",
             class: "vc-nav-title vc-focus",
             onClick: toggleMode,
             onKeydown: _cache[1] || (_cache[1] = (e) => unref(onSpaceOrEnter)(e, toggleMode))
           }, toDisplayString(unref(title2)), 33),
-          createElementVNode("button", {
-            type: "button",
+          createElementVNode("span", {
+            role: "button",
             class: "vc-nav-arrow is-right vc-focus",
             disabled: !unref(nextItemsEnabled),
             onClick: moveNext,
@@ -6657,9 +6657,9 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
         ]),
         createElementVNode("div", _hoisted_4$2, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(activeItems), (item) => {
-            return openBlock(), createElementBlock("button", {
+            return openBlock(), createElementBlock("span", {
               key: item.label,
-              type: "button",
+              role: "button",
               "data-id": item.id,
               "aria-label": item.ariaLabel,
               class: normalizeClass(["vc-nav-item vc-focus", [

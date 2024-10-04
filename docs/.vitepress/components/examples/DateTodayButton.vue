@@ -2,12 +2,13 @@
   <VDatePicker v-model="date" color="indigo" ref="picker">
     <template #footer>
       <div class="w-full px-3 pb-3">
-        <button
+        <span
+          role="button"
           class="bg-indigo-600 hover:bg-indigo-700 focus:ring-2 text-white font-bold w-full px-3 py-1 rounded-md"
           @click="setToday"
         >
           Today
-        </button>
+        </span>
       </div>
     </template>
   </VDatePicker>

@@ -1,7 +1,7 @@
 <template>
-  <button @click="select">
+  <span role="button" @click="select">
     <slot :selected="selected" />
-  </button>
+  </span>
 </template>
 <script setup lang="ts">
 import { computed } from 'vue';

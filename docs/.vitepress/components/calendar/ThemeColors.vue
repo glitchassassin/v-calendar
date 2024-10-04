@@ -1,14 +1,15 @@
 <template>
   <div class="space-y-2">
     <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
-      <button
+      <span
+        role="button"
         v-for="color in colors"
         :key="color.value"
         :class="colorClass(color)"
         @click="selectedColor = color"
       >
         {{ color.label }}
-      </button>
+      </span>
     </div>
     <div
       v-if="showDarkMode"

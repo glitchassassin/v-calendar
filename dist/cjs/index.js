@@ -6606,8 +6606,8 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
         ref: navContainer
       }, [
         vue.createElementVNode("div", _hoisted_1$5, [
-          vue.createElementVNode("button", {
-            type: "button",
+          vue.createElementVNode("span", {
+            role: "button",
             class: "vc-nav-arrow is-left vc-focus",
             disabled: !vue.unref(prevItemsEnabled),
             onClick: movePrev,
@@ -6628,14 +6628,14 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
               _: 1
             }, 8, ["disabled"])
           ], 40, _hoisted_2$4),
-          vue.createElementVNode("button", {
-            type: "button",
+          vue.createElementVNode("span", {
+            role: "button",
             class: "vc-nav-title vc-focus",
             onClick: toggleMode,
             onKeydown: _cache[1] || (_cache[1] = (e) => vue.unref(onSpaceOrEnter)(e, toggleMode))
           }, vue.toDisplayString(vue.unref(title2)), 33),
-          vue.createElementVNode("button", {
-            type: "button",
+          vue.createElementVNode("span", {
+            role: "button",
             class: "vc-nav-arrow is-right vc-focus",
             disabled: !vue.unref(nextItemsEnabled),
             onClick: moveNext,
@@ -6659,9 +6659,9 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
         ]),
         vue.createElementVNode("div", _hoisted_4$2, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(activeItems), (item) => {
-            return vue.openBlock(), vue.createElementBlock("button", {
+            return vue.openBlock(), vue.createElementBlock("span", {
               key: item.label,
-              type: "button",
+              role: "button",
               "data-id": item.id,
               "aria-label": item.ariaLabel,
               class: vue.normalizeClass(["vc-nav-item vc-focus", [

@@ -2,12 +2,13 @@
   <div>
     <DateDisplay v-model="date">
       <template #default="{ togglePopover }">
-        <button
+        <span
+          role="button"
           class="px-3 py-2 bg-blue-500 hover:bg-blue-600 text-sm text-white font-semibold rounded-md"
           @click="togglePopover"
         >
           Select date
-        </button>
+        </span>
       </template>
     </DateDisplay>
   </div>

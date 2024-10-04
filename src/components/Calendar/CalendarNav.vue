@@ -4,8 +4,8 @@
     <!--Nav header-->
     <div class="vc-nav-header">
       <!--Move prev button-->
-      <button
-        type="button"
+      <span
+        role="button"
         class="vc-nav-arrow is-left vc-focus"
         :disabled="!prevItemsEnabled"
         @click="movePrev"
@@ -18,19 +18,19 @@
         >
           <BaseIcon name="ChevronLeft" width="22px" height="24px" />
         </CalendarSlot>
-      </button>
+      </span>
       <!--Mode switch button-->
-      <button
-        type="button"
+      <span
+        role="button"
         class="vc-nav-title vc-focus"
         @click="toggleMode"
         @keydown="(e: KeyboardEvent) => onSpaceOrEnter(e, toggleMode)"
       >
         {{ title }}
-      </button>
+    </span>
       <!--Move next button-->
-      <button
-        type="button"
+      <span
+        role="button"
         class="vc-nav-arrow is-right vc-focus"
         :disabled="!nextItemsEnabled"
         @click="moveNext"
@@ -43,14 +43,14 @@
         >
           <BaseIcon name="ChevronRight" width="22px" height="24px" />
         </CalendarSlot>
-      </button>
+      </span>
     </div>
     <!--Navigation items-->
     <div class="vc-nav-items">
-      <button
+      <span
         v-for="item in activeItems"
         :key="item.label"
-        type="button"
+        role="button"
         :data-id="item.id"
         :aria-label="item.ariaLabel"
         class="vc-nav-item vc-focus"
@@ -62,7 +62,7 @@
         @keydown="(e: KeyboardEvent) => onSpaceOrEnter(e, item.click)"
       >
         {{ item.label }}
-      </button>
+    </span>
     </div>
   </div>
 </template>

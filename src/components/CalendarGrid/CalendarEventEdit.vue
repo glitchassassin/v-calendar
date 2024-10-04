@@ -14,9 +14,9 @@
       <!--Buttons-->
       <div class="flex justify-end items-center space-x-3">
         <!--Edit button-->
-        <button
+        <span
           v-if="!event.editing"
-          type="button"
+          role="button"
           class="w-5 h-5 text-blue-500 hover:opacity-50"
           @click="onToggleEditing()"
         >
@@ -33,10 +33,10 @@
               d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
             />
           </svg>
-        </button>
+        </span>
         <!--Remove button-->
-        <button
-          type="button"
+        <span
+          role="button"
           class="w-5 h-5 text-red-500 hover:opacity-50"
           @click="onRemove"
         >
@@ -53,10 +53,10 @@
               d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
             />
           </svg>
-        </button>
+        </span>
         <!--Close button-->
-        <button
-          type="button"
+        <span
+          role="button"
           class="w-5 h-5 hover:opacity-50"
           @click="$emit('close')"
         >
@@ -73,27 +73,27 @@
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
-        </button>
+        </span>
       </div>
     </div>
     <div v-if="event.editing">
       <div class="flex justify-end items-center space-x-2 mt-3 mb-1">
         <!--Save button-->
-        <button
-          type="button"
+        <span
+          role="button"
           class="flex justify-center items-center bg-blue-200 text-sm text-blue-800 hover:bg-blue-300 px-2 py-1 rounded"
           @click="onSave"
         >
           Save
-        </button>
+        </span>
         <!--Cancel button-->
-        <button
-          type="button"
+        <span
+          role="button"
           class="flex justify-center items-center text-sm px-2 py-1 rounded hover:bg-gray-500"
           @click="onCancel"
         >
           Cancel
-        </button>
+        </span>
       </div>
     </div>
     <div v-else class="py-2 px-3 space-y-2">

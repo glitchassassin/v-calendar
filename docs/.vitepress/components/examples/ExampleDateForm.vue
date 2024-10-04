@@ -21,15 +21,15 @@
             />
           </template>
         </VDatePicker>
-        <button
-          type="button"
+        <span
+          role="button"
           class="text-white font-bold py-2 px-4 rounded-r user-select-none focus:outline-none"
           :class="date ? 'bg-red-500' : 'bg-red-300'"
           :disabled="!date"
           @click="date = null"
         >
           Clear
-        </button>
+        </span>
       </div>
       <p
         class="text-red-600 dark:text-red-400 text-xs italic mt-1"

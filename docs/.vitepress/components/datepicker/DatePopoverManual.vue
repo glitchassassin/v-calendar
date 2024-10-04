@@ -4,12 +4,13 @@
       <div
         class="flex rounded-lg border border-gray-300 dark:border-gray-600 overflow-hidden"
       >
-        <button
+        <span
+          role="button"
           class="flex justify-center items-center px-2 bg-accent-100 hover:bg-accent-200 text-accent-700 border-r border-gray-300 dark:bg-gray-700 dark:text-accent-300 dark:border-gray-600 dark:hover:bg-gray-600"
           @click="() => togglePopover()"
         >
           <IconCalendar class="w-5 h-5" />
-        </button>
+        </span>
         <input
           :value="inputValue"
           v-on="inputEvents"

@@ -1,5 +1,6 @@
 <template>
-  <button
+  <span
+    role="button"
     class="text-xl sm:text-3xl font-display px-3 sm:px-4 py-2 sm:py-3 rounded-lg"
     :class="
       selected
@@ -16,7 +17,7 @@
     >
       <slot />
     </span>
-  </button>
+  </span>
 </template>
 
 <script setup>
