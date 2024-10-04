@@ -273,7 +273,7 @@
 .vc-header .vc-arrow:hover {
       background: var(--vc-header-arrow-hover-bg);
 }
-.vc-header .vc-arrow:disabled {
+.vc-header .vc-arrow.disabled {
       opacity: 0.25;
       pointer-events: none;
 }
@@ -302,7 +302,7 @@
 .vc-nav-title:hover, .vc-nav-arrow:hover, .vc-nav-item:hover {
     background-color: var(--vc-nav-hover-bg);
 }
-.vc-nav-title:disabled, .vc-nav-arrow:disabled, .vc-nav-item:disabled {
+.vc-nav-title.disabled, .vc-nav-arrow.disabled, .vc-nav-item.disabled {
     opacity: 0.25;
     pointer-events: none;
 }

@@ -8,7 +8,7 @@
       v-if="show.prev"
       role="button"
       class="vc-arrow vc-prev vc-focus"
-      :disabled="!canMovePrev"
+      :class="{ disabled: !canMovePrev }"
       @click="movePrev"
       @keydown.space.enter="movePrev"
     >
@@ -29,7 +29,7 @@
       v-if="show.next"
       role="button"
       class="vc-arrow vc-next vc-focus"
-      :disabled="!canMoveNext"
+      :class="{ disabled: !canMoveNext }"
       @click="moveNext"
       @keydown.space.enter="moveNext"
     >
@@ -194,7 +194,7 @@ const gridStyle = computed(() => {
     &:hover {
       background: var(--vc-header-arrow-hover-bg);
     }
-    &:disabled {
+    &.disabled {
       opacity: 0.25;
       pointer-events: none;
     }

@@ -6026,7 +6026,7 @@ const _hoisted_2$b = {
   key: 0,
   class: "vc-day-popover-row-indicator"
 };
-const _hoisted_3$9 = { class: "vc-day-popover-row-label" };
+const _hoisted_3$8 = { class: "vc-day-popover-row-label" };
 const _sfc_main$j = /* @__PURE__ */ vue.defineComponent({
   __name: "PopoverRow",
   props: {
@@ -6067,7 +6067,7 @@ const _sfc_main$j = /* @__PURE__ */ vue.defineComponent({
             class: vue.normalizeClass(vue.unref(indicator).class)
           }, null, 2)
         ])) : vue.createCommentVNode("", true),
-        vue.createElementVNode("div", _hoisted_3$9, [
+        vue.createElementVNode("div", _hoisted_3$8, [
           vue.renderSlot(_ctx.$slots, "default", {}, () => [
             vue.createTextVNode(vue.toDisplayString(__props.attribute.popover ? __props.attribute.popover.label : "No content provided"), 1)
           ])
@@ -6150,11 +6150,11 @@ const _hoisted_1$a = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$9 = /* @__PURE__ */ vue.createElementVNode("polyline", { points: "9 18 15 12 9 6" }, null, -1);
-const _hoisted_3$8 = [
+const _hoisted_3$7 = [
   _hoisted_2$9
 ];
 function _sfc_render$6(_ctx, _cache) {
-  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$a, _hoisted_3$8);
+  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$a, _hoisted_3$7);
 }
 const IconChevronRight = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$6]]);
 const _sfc_main$f = {};
@@ -6164,11 +6164,11 @@ const _hoisted_1$9 = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$8 = /* @__PURE__ */ vue.createElementVNode("polyline", { points: "15 18 9 12 15 6" }, null, -1);
-const _hoisted_3$7 = [
+const _hoisted_3$6 = [
   _hoisted_2$8
 ];
 function _sfc_render$5(_ctx, _cache) {
-  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$9, _hoisted_3$7);
+  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$9, _hoisted_3$6);
 }
 const IconChevronLeft = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$5]]);
 const _sfc_main$e = {};
@@ -6178,11 +6178,11 @@ const _hoisted_1$8 = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$7 = /* @__PURE__ */ vue.createElementVNode("polyline", { points: "6 9 12 15 18 9" }, null, -1);
-const _hoisted_3$6 = [
+const _hoisted_3$5 = [
   _hoisted_2$7
 ];
 function _sfc_render$4(_ctx, _cache) {
-  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$8, _hoisted_3$6);
+  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$8, _hoisted_3$5);
 }
 const IconChevronDown = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$4]]);
 const _sfc_main$d = {};
@@ -6194,11 +6194,11 @@ const _hoisted_1$7 = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$6 = /* @__PURE__ */ vue.createElementVNode("path", { d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" }, null, -1);
-const _hoisted_3$5 = [
+const _hoisted_3$4 = [
   _hoisted_2$6
 ];
 function _sfc_render$3(_ctx, _cache) {
-  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$7, _hoisted_3$5);
+  return vue.openBlock(), vue.createElementBlock("svg", _hoisted_1$7, _hoisted_3$4);
 }
 const IconClock = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$3]]);
 const icons = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
@@ -6232,16 +6232,14 @@ const _sfc_main$c = /* @__PURE__ */ vue.defineComponent({
   }
 });
 const BaseIcon_vue_vue_type_style_index_0_lang = "";
-const _hoisted_1$6 = ["disabled"];
-const _hoisted_2$5 = {
+const _hoisted_1$6 = {
   key: 1,
   class: "vc-title-wrapper"
 };
-const _hoisted_3$4 = {
+const _hoisted_2$5 = {
   role: "button",
   class: "vc-title"
 };
-const _hoisted_4$3 = ["disabled"];
 const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
   __name: "CalendarHeader",
   props: {
@@ -6327,8 +6325,7 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
         vue.unref(show).prev ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 0,
           role: "button",
-          class: "vc-arrow vc-prev vc-focus",
-          disabled: !vue.unref(canMovePrev),
+          class: vue.normalizeClass(["vc-arrow vc-prev vc-focus", { disabled: !vue.unref(canMovePrev) }]),
           onClick: _cache[0] || (_cache[0] = //@ts-ignore
           (...args) => vue.unref(movePrev) && vue.unref(movePrev)(...args)),
           onKeydown: _cache[1] || (_cache[1] = vue.withKeys(
@@ -6349,11 +6346,11 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
             ]),
             _: 1
           }, 8, ["disabled"])
-        ], 40, _hoisted_1$6)) : vue.createCommentVNode("", true),
-        vue.unref(show).title ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$5, [
+        ], 34)) : vue.createCommentVNode("", true),
+        vue.unref(show).title ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$6, [
           vue.createVNode(_sfc_main$i, { name: "header-title-wrapper" }, {
             default: vue.withCtx(() => [
-              vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_3$4, [
+              vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_2$5, [
                 vue.createVNode(_sfc_main$i, {
                   name: "header-title",
                   title: __props.page.title
@@ -6373,8 +6370,7 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
         vue.unref(show).next ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 2,
           role: "button",
-          class: "vc-arrow vc-next vc-focus",
-          disabled: !vue.unref(canMoveNext),
+          class: vue.normalizeClass(["vc-arrow vc-next vc-focus", { disabled: !vue.unref(canMoveNext) }]),
           onClick: _cache[2] || (_cache[2] = //@ts-ignore
           (...args) => vue.unref(moveNext) && vue.unref(moveNext)(...args)),
           onKeydown: _cache[3] || (_cache[3] = vue.withKeys(
@@ -6395,7 +6391,7 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
             ]),
             _: 1
           }, 8, ["disabled"])
-        ], 40, _hoisted_4$3)) : vue.createCommentVNode("", true)
+        ], 34)) : vue.createCommentVNode("", true)
       ], 6);
     };
   }
@@ -6456,10 +6452,8 @@ function usePage() {
   );
 }
 const _hoisted_1$5 = { class: "vc-nav-header" };
-const _hoisted_2$4 = ["disabled"];
-const _hoisted_3$3 = ["disabled"];
-const _hoisted_4$2 = { class: "vc-nav-items" };
-const _hoisted_5$2 = ["data-id", "aria-label", "disabled", "onClick", "onKeydown"];
+const _hoisted_2$4 = { class: "vc-nav-items" };
+const _hoisted_3$3 = ["data-id", "aria-label", "onClick", "onKeydown"];
 const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
   __name: "CalendarNav",
   setup(__props) {
@@ -6608,8 +6602,7 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
         vue.createElementVNode("div", _hoisted_1$5, [
           vue.createElementVNode("span", {
             role: "button",
-            class: "vc-nav-arrow is-left vc-focus",
-            disabled: !vue.unref(prevItemsEnabled),
+            class: vue.normalizeClass(["vc-nav-arrow is-left vc-focus", { disabled: !vue.unref(prevItemsEnabled) }]),
             onClick: movePrev,
             onKeydown: _cache[0] || (_cache[0] = (e) => vue.unref(onSpaceOrEnter)(e, movePrev))
           }, [
@@ -6627,7 +6620,7 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
               ]),
               _: 1
             }, 8, ["disabled"])
-          ], 40, _hoisted_2$4),
+          ], 34),
           vue.createElementVNode("span", {
             role: "button",
             class: "vc-nav-title vc-focus",
@@ -6636,8 +6629,7 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
           }, vue.toDisplayString(vue.unref(title2)), 33),
           vue.createElementVNode("span", {
             role: "button",
-            class: "vc-nav-arrow is-right vc-focus",
-            disabled: !vue.unref(nextItemsEnabled),
+            class: vue.normalizeClass(["vc-nav-arrow is-right vc-focus", { disabled: !vue.unref(nextItemsEnabled) }]),
             onClick: moveNext,
             onKeydown: _cache[2] || (_cache[2] = (e) => vue.unref(onSpaceOrEnter)(e, moveNext))
           }, [
@@ -6655,9 +6647,9 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
               ]),
               _: 1
             }, 8, ["disabled"])
-          ], 40, _hoisted_3$3)
+          ], 34)
         ]),
-        vue.createElementVNode("div", _hoisted_4$2, [
+        vue.createElementVNode("div", _hoisted_2$4, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(activeItems), (item) => {
             return vue.openBlock(), vue.createElementBlock("span", {
               key: item.label,
@@ -6665,12 +6657,12 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
               "data-id": item.id,
               "aria-label": item.ariaLabel,
               class: vue.normalizeClass(["vc-nav-item vc-focus", [
-                item.isActive ? "is-active" : item.isCurrent ? "is-current" : ""
+                item.isActive ? "is-active" : item.isCurrent ? "is-current" : "",
+                { disabled: item.isDisabled }
               ]]),
-              disabled: item.isDisabled,
               onClick: item.click,
               onKeydown: (e) => vue.unref(onSpaceOrEnter)(e, item.click)
-            }, vue.toDisplayString(item.label), 43, _hoisted_5$2);
+            }, vue.toDisplayString(item.label), 43, _hoisted_3$3);
           }), 128))
         ])
       ], 512);

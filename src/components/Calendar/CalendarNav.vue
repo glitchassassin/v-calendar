@@ -7,7 +7,7 @@
       <span
         role="button"
         class="vc-nav-arrow is-left vc-focus"
-        :disabled="!prevItemsEnabled"
+        :class="{ disabled: !prevItemsEnabled }"
         @click="movePrev"
         @keydown="(e: KeyboardEvent) => onSpaceOrEnter(e, movePrev)"
       >
@@ -32,7 +32,7 @@
       <span
         role="button"
         class="vc-nav-arrow is-right vc-focus"
-        :disabled="!nextItemsEnabled"
+        :class="{ disabled: !nextItemsEnabled }"
         @click="moveNext"
         @keydown="(e: KeyboardEvent) => onSpaceOrEnter(e, moveNext)"
       >
@@ -56,8 +56,8 @@
         class="vc-nav-item vc-focus"
         :class="[
           item.isActive ? 'is-active' : item.isCurrent ? 'is-current' : '',
+          { disabled: item.isDisabled }
         ]"
-        :disabled="item.isDisabled"
         @click="item.click"
         @keydown="(e: KeyboardEvent) => onSpaceOrEnter(e, item.click)"
       >
@@ -272,7 +272,7 @@ onMounted(() => focusFirstItem());
   &:hover {
     background-color: var(--vc-nav-hover-bg);
   }
-  &:disabled {
+  &.disabled {
     opacity: 0.25;
     pointer-events: none;
   }
